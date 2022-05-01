@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/quest"
+        android:icon="@drawable/chart"
+        android:title="任务广场"
+        />
+    <item
+        android:id="@+id/purse"
+        android:icon="@drawable/purse"
+        android:title="购买数据"
+        />
+    <item
+        android:id="@+id/chart"
+        android:icon="@drawable/chart"
+        android:title="查看数据"
+        />
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/setting"
+        android:title="账号管理"
+        />
+</menu>

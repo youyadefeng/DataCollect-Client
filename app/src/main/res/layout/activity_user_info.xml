@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="4"
+    tools:context=".UserInfoActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#1A72D1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/head_icon" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_height="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="用户ID"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/userid"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:text="1234"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="match_parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="用户名"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:text="yydf"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="match_parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</LinearLayout>
