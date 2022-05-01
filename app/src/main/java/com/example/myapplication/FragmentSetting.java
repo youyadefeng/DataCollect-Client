@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -60,6 +61,7 @@ public class FragmentSetting extends Fragment implements View.OnClickListener{
         ConstraintLayout signin = (ConstraintLayout) view.findViewById(R.id.signin);
         ConstraintLayout userinfo = (ConstraintLayout)view.findViewById(R.id.userinfo);
         ConstraintLayout about = (ConstraintLayout)view.findViewById(R.id.about);
+        ConstraintLayout github = (ConstraintLayout) view.findViewById(R.id.github);
         ImageView headIcon = (ImageView) view.findViewById(R.id.head_icon);
         userName = (TextView) view.findViewById(R.id.username);
         scoreText = (TextView) view.findViewById(R.id.score_text);
@@ -70,6 +72,7 @@ public class FragmentSetting extends Fragment implements View.OnClickListener{
         about.setOnClickListener(this);
         headIcon.setOnClickListener(this);
         userName.setOnClickListener(this);
+        github.setOnClickListener(this);
     }
 
 
@@ -102,12 +105,11 @@ public class FragmentSetting extends Fragment implements View.OnClickListener{
             }
             case R.id.github:
             {
-
                 if(NetWorkTask.isNetConnection(getActivity()))
                 {
-                    //Intent i = new Intent(Intent.ACTION_VIEW);
-                    //i.setData(Uri.parse("https://github.com/PhilJay/MPAndroidChart/blob/master/MPChartExample/src/com/xxmassdeveloper/mpchartexample/LineChartActivity1.java"));
-                    //startActivity(i);
+                    Intent i = new Intent(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse("https://github.com/youyadefeng/DataCollect-Client"));
+                    startActivity(i);
                 }
                 else
                     Toast.makeText(getActivity(), "网络连接错误", Toast.LENGTH_SHORT).show();

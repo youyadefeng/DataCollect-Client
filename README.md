@@ -1,5 +1,7 @@
 # DataCollect-Client
 
-这是我的毕业设计《大数据获取系统的设计与实现》中的客户端部分
+毕业设计《大数据获取系统的设计与实现》客户端
 
-使用Android作为客户端
+Client项目：https://github.com/youyadefeng/DataCollect-Client
+
+Server项目：
