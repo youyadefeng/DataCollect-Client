@@ -57,7 +57,7 @@ public class QuestDetailActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View view) {
         if(view.getId() == R.id.accept)
         {
-            Intent intent = new Intent(QuestDetailActivity.this, SubQuestionActivity.class);
+            Intent intent = new Intent(QuestDetailActivity.this, DoQuestActivity.class);
             intent.putExtra("quest", quest);
             intent.putExtra("userid", userid);
             startActivity(intent);

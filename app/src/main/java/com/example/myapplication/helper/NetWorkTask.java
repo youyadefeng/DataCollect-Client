@@ -38,7 +38,6 @@ public class NetWorkTask {
 
     static {
         client = new OkHttpClient();
-
         urlMap.put("logon", "/user/logon");
         urlMap.put("register", "/user/register");
         urlMap.put("userinfo", "/user/userinfo");

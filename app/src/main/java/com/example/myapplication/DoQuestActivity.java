@@ -9,7 +9,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +18,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.myapplication.adapter.PurseAdapter;
 import com.example.myapplication.bean.EpidemicInfoSearch;
 import com.example.myapplication.bean.NoiseSearch;
 import com.example.myapplication.bean.Option;
@@ -35,7 +33,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class SubQuestionActivity extends AppCompatActivity implements View.OnClickListener{
+public class DoQuestActivity extends AppCompatActivity implements View.OnClickListener{
     Button submit;
     List<SubQuestion> questionList = new ArrayList<SubQuestion>();
     List<Option> optionList = new ArrayList<Option>();
@@ -188,7 +186,7 @@ public class SubQuestionActivity extends AppCompatActivity implements View.OnCli
                     //According to questid insert data
                     if (hasUnselect)
                     {
-                        Toast.makeText(SubQuestionActivity.this,"存在未完成的问题", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DoQuestActivity.this,"存在未完成的问题", Toast.LENGTH_SHORT).show();
                     }
                     else
                     {
@@ -243,7 +241,7 @@ public class SubQuestionActivity extends AppCompatActivity implements View.OnCli
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            alertDialog = AlertDialogCreator.MakeDialog(SubQuestionActivity.this);
+            alertDialog = AlertDialogCreator.MakeDialog(DoQuestActivity.this);
             alertDialog.show();
         }
 
@@ -288,7 +286,7 @@ public class SubQuestionActivity extends AppCompatActivity implements View.OnCli
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            alertDialog = AlertDialogCreator.MakeDialog(SubQuestionActivity.this);
+            alertDialog = AlertDialogCreator.MakeDialog(DoQuestActivity.this);
             alertDialog.show();
         }
 
@@ -309,7 +307,7 @@ public class SubQuestionActivity extends AppCompatActivity implements View.OnCli
         protected void onPostExecute(Void unused) {
             super.onPostExecute(unused);
             alertDialog.dismiss();
-            Toast.makeText(SubQuestionActivity.this, "完成任务，获得积分：" + quest.getReward(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(DoQuestActivity.this, "完成任务，获得积分：" + quest.getReward(), Toast.LENGTH_SHORT).show();
             submit.setText("已提交");
             submit.setVisibility(View.INVISIBLE);
         }
